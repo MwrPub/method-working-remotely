@@ -14,7 +14,7 @@
         txtValue.value = await kv.get(txtKey.value);
     });
 	document.getElementById('btn_set').addEventListener('click', async function(){
-        kv.set(txtKey.value,txtValueS.value).then(res=>{
+        kv.set(txtKeyS.value,txtValueS.value).then(res=>{
 			$('#dialog').modal();
 		});
     });

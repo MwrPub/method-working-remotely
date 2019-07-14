@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>Test MwrClient</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="card mt-4 ml-4 mr-4">
+    <div class="card-body">
+        <h5 class="card-title">Test MwrClient</h5>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pill_get" data-toggle="pill" href="#tab_get" role="tab"
+                   aria-controls="tab_get" aria-selected="true">Get</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pill_set" data-toggle="pill" href="#tab_set" role="tab" aria-controls="tab_set"
+                   aria-selected="false">Set</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="tab_get" role="tabpanel" aria-labelledby="pill_get">
+                <div class="form-group">
+                    <label for="txt_key">Key</label>
+                    <input type="text" id="txt_key" class="form-control"/>
+                </div>
+                <button id="btn_get" class="btn btn-block btn-success">Get</button>
+                <div class="form-group">
+                    <label for="txt_value">Value</label>
+                    <textarea id="txt_value" class="form-control" rows="6"></textarea>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_set" role="tabpanel" aria-labelledby="pill_set">
+                <div class="form-group">
+                    <label for="txt_key_s">Key</label>
+                    <input type="text" id="txt_key_s" class="form-control"/>
+                </div>
+                <button id="btn_set" class="btn btn-block btn-success">Set</button>
+                <div class="form-group">
+                    <label for="txt_value_s">Value</label>
+                    <textarea id="txt_value_s" class="form-control" rows="6"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dialog" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">MwrClient</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Set Successful.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="mwr.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

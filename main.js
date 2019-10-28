@@ -2,7 +2,7 @@
 (function () {
 	let kv = new MwrClient({
 		https: true,
-		host: 'mwr-server--ivanlulyf.repl.co',
+		host: 'rpc.mwr.pub',
 		port: 80,
 		endpoint: 'kv'
 	});
